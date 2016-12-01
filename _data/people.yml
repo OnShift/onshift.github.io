@@ -1,0 +1,12 @@
+---
+dschaefer:
+  first_name: Dan
+  last_name: Schaefer
+  full_name: Dan Schaefer
+  job_title: Systems Engineer
+  email: dschaefer@onshift.com
+  handles:
+    github: lieutdan13
+    linkedin: danschaefer13
+  bio: |
+    I'm a Systems Engineer on Don't Panic (Ops Team) at OnShift. I was hired in March of 2015 as a developer on the Integrations Team and have moved over to the Ops Team as needs arose. I had a background as a full-stack PHP developer and bit of Operations experience before moving to OnShift. I now have plenty of experience with Ansible, Amazon Web Services, and various different types of hosted technologies.
