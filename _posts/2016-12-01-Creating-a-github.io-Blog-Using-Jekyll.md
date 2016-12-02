@@ -36,7 +36,7 @@ The reason I chose to *copy* the repo instead of forking, is because we will be 
 
 ## Customize
 
-One of the first things I did after the blog was up and running was to style it. We have a Front End Software Developer—Ali Orlando—that created a project called Flamingo to standardize our styles accross all projects. Flamingo is an extension of the Twitter Bootstrap framework. We have open sourced it on <a href="https://github.com/OnShift/flamingo">Github</a> and have a working <a href="https://onshift.github.io/flamingo/">demo</a>.
+One of the first things I did after the blog was up and running was to style it. We have a Front End Software Developer—Ali Orlando—that created a project called Flamingo to standardize our styles accross all projects. Flamingo is an extension of the Twitter Bootstrap framework. We have a working <a href="https://onshift.github.io/flamingo/">demo</a>.
 
 ## Future
 
