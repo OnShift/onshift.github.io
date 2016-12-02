@@ -12,7 +12,7 @@ description: We make cool things
 long_description: An engineering blog for our department to share with the world our passion for the technologies we've used here at OnShift.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: images/Shifty-thumb.png
+avatar: /images/Shifty-thumb.png
 
 #
 # Flags below are optional
