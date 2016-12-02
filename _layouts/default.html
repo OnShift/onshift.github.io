@@ -11,8 +11,10 @@
 
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="stylesheet" href="https://onshift.github.io/flamingo/css/flamingo.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/adce67ce41.css" media="all">
     <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -20,7 +22,7 @@
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#productNav" aria-expanded="false">
-            [Toggle Menu]
+            <i class="fa fa-bars"></i>
           </button>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -51,11 +53,11 @@
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand visible-xs" href="#">
+            <a class="navbar-brand visible-xs" href="/">
                 )°( Engineering Blog
             </a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primaryNav">
-                [Toggle Menu]
+              <i class="fa fa-bars"></i>
             </button>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -82,6 +84,7 @@
       </div>
     </div>
 
+    <script src="https://use.fontawesome.com/adce67ce41.js"></script>
     {% include analytics.html %}
   </body>
 </html>
