@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="wf-fontawesome-n4-active wf-active">
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
@@ -9,36 +9,72 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://onshift.github.io/flamingo/css/flamingo.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/adce67ce41.css" media="all">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css">
   </head>
 
   <body>
-    <div class="wrapper-masthead">
+    <nav class="navbar navbar-utility">
       <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#productNav" aria-expanded="false">
+            [Toggle Menu]
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="productNav">
+          <ul class="nav navbar-nav">
+            <li><a href="https://www.onshift.com/">OnShift</a></li>
+            <li class="active"><a href="/">Engineering Blog<span class="sr-only">(current)</span></a></li>
+          </ul>
+        </div>
       </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                <div class="mb-md mt-md mr-sm">
+                    <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+                    <span class="h2 product">{{ site.name }}</span>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <h3 class="unbold text-right mt-xl">{{ site.description }}</h3>
+            </div>
+        </div>
     </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
+    <nav class="navbar navbar-schedule">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand visible-xs" href="#">
+                )°( Engineering Blog
+            </a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primaryNav">
+                [Toggle Menu]
+            </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="primaryNav">
+          <ul class="nav navbar-nav">
+            <li{% if page.path == "/" %} class="active"{% endif %}><a href="{{ site.baseurl }}/">Blog</a></li>
+            <li{% if page.path == "/about/" %} class="active"{% endif %}><a href="{{ site.baseurl }}/about">About</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="main-content">
+        <div id="main" role="main" class="container">
+            {{ content }}
+        </div>
     </div>
 
-    <div class="wrapper-footer">
+    <div class="panel-footer">
       <div class="container">
         <footer class="footer">
           {% include svg-icons.html %}

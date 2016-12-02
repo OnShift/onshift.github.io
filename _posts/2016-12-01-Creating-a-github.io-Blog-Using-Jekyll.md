@@ -21,17 +21,17 @@ I've decided to use Github.io for the hosting platform and jekyll&ndash;more spe
 For the purposes of the initialization steps, I am assuming that the username/organization name is *OnShift*. Anywhere you see *OnShift*, replace it with your own username or organization.
 
 1. Create an empty, public repository with the name *OnShift/OnShift.github.io*. Do **not** initialize the repo with any files. It must be an empty repo.
-2. Run these commands locally, essentially copying the `git@github.com:barryclark/jekyll-now.git` repo into the empty repo you just created.
+2. Run these commands locally, essentially copying the *git@github.com:barryclark/jekyll-now.git* repo into the empty repo you just created.
    <pre>
-   git clone git@github.com:OnShift/OnShift.github.io.git
+   <code>git clone git@github.com:OnShift/OnShift.github.io.git
    cd OnShift.github.io
    git checkout master
    git remote add barryclark git@github.com:barryclark/jekyll-now.git
    git pull barryclark master
-   git push origin master
+   git push origin master</code>
    </pre>
 
-The reason I chose to *copy* the repo instead of forking, is because we will be making a significant number of changes to the repo and it deviate so much that it would not make sense to contribute to the original project using the fork. If the original repo were to have any improvements that we would like to have in our our repo, we are still able to pull in the changes either by pulling from the original repo or by creating a `git diff` file and apply the patch over top. Either way, we will most likely need to resolve merge conflicts.
+The reason I chose to *copy* the repo instead of forking, is because we will be making a significant number of changes to the repo and it deviate so much that it would not make sense to contribute to the original project using the fork. If the original repo were to have any improvements that we would like to have in our our repo, we are still able to pull in the changes either by pulling from the original repo or by creating a git patch and apply it over top our repo. Either way, we will most likely need to resolve merge conflicts.
 
 ## Configure and Customize
 ...
