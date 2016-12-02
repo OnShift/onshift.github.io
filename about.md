@@ -17,12 +17,19 @@ OnShift delivers cloud-based software and proactive services to solve everyday w
 <div class="authors">
   {% for author_hash in site.data.people %}
   {% assign author = author_hash[1] %}
-    <article class="author mt-sm" id="author-{{ author_hash[0] }}">
+    <article class="author mt-md" id="author-{{ author_hash[0] }}">
 
-      <h2>{{ author.full_name }}</h2>
-      <h3>{{ author.job_title }}</h3>
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="img-circle img-circle-xl" style="background-image: url({% if author.avatar %}{{ author.avatar }}{% else %}https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png{% endif %});"></div>
+        </div>
+        <div class="col-sm-10">
+          <h2>{{ author.full_name }}</h2>
+          <h3>{{ author.job_title }}</h3>
+        </div>
+      </div>
 
-      <div class="bio">
+      <div class="bio mt-md">
         <p>
           {{ author.bio }}
         </p>
