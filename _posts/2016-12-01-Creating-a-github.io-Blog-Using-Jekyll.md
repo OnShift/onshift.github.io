@@ -8,6 +8,7 @@ title: Creating a github.io Blog Using Jekyll
 For OnShift's 2016 Q4 Engineering Hack Day, I decided to create a blog for our department to share with the world our passion for the technologies we've used here at OnShift. I felt that it was very appropriate to write the first post, explaining what I did to setup this very blog.
 
 ## Technologies
+
 I've decided to use Github.io for the hosting platform and jekyll&ndash;more specifically, `git@github.com:barryclark/jekyll-now.git`&ndash;for the blog site generator. My reasons for choosing these options are as follows:
 
 - It's a free option
@@ -33,5 +34,10 @@ For the purposes of the initialization steps, I am assuming that the username/or
 
 The reason I chose to *copy* the repo instead of forking, is because we will be making a significant number of changes to the repo and it deviate so much that it would not make sense to contribute to the original project using the fork. If the original repo were to have any improvements that we would like to have in our our repo, we are still able to pull in the changes either by pulling from the original repo or by creating a git patch and apply it over top our repo. Either way, we will most likely need to resolve merge conflicts.
 
-## Configure and Customize
-...
+## Customize
+
+One of the first things I did after the blog was up and running was to style it. We have a Front End Software Developer—Ali Orlando—that created a project called Flamingo to standardize our styles accross all projects. Flamingo is an extension of the Twitter Bootstrap framework. We have open sourced it on <a href="https://github.com/OnShift/flamingo">Github</a> and have a working <a href="https://onshift.github.io/flamingo/">demo</a>.
+
+## Future
+
+I recognize that this blog has a very basic design and it has a few spacing issues. However, this site is on <a href="https://github.com/OnShift/OnShift.github.io">Github</a> and I plan to have others contribute not only with content, but also with style modifications.
