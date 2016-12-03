@@ -7,23 +7,20 @@
 /* BASE RULES */
 /**************/
 .post {
+  h2 {
+    .mt-md;
+  }
   .date {
     font-style: italic;
   }
   .edits {
-    /*border-top: 1px solid #ccc;*/
     .edit {
-      font-size: 120%;
+      font-size: 140%;
       font-style: italic;
-      .heading {
-      }
-      .description {
-      }
     }
   }
-  .pretty-date {
-      font-size: 120%;
-      border-top: 1px solid #ccc;
+  .info div {
+    display: inline;
   }
 }
 
@@ -37,12 +34,6 @@
       color: inherit;
     }
   }
-}
-
-.posts {
-    article.post {
-        border-bottom: 1px solid #d6d6d6;
-    }
 }
 
 .site-avatar img {

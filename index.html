@@ -5,9 +5,21 @@ path: /
 
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post mb-md pb-md">
+    <article class="post well">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="info mt-sm mb-sm">
+        <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
+        by
+        <div class="author">
+        {% if site.data.people[post.author] %}
+          <a href="/about/#author-{{ post.author }}">{{ site.data.people[post.author].full_name }}</a>
+        {% else %}
+          {{ post.author }}
+        {% endif %}
+        </div>
+      </div>
 
       <div class="entry">
         {{ post.excerpt }}
