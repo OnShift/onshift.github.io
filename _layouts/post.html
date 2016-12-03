@@ -11,12 +11,12 @@ layout: default
   </div>
 
   {% if page.edits %}
-  <div class="edits mt-md">
+  <div class="edits">
 
-    {% for edit in page.edits %}
-    <div class="edit">
-      <div class="heading">This post was edited on {{ edit.date | date: "%B %e, %Y %H:%m%p" }}</div>
-      <div class="description">{{ edit.description }}</div>
+    {% for post_edit in page.edits %}
+    <div class="edit mt-md">
+      <div class="heading">This post was edited on {{ post_edit.date | date: "%B %e, %Y %I:%M%p" }}</div>
+      <div class="description">{{ post_edit.description }}</div>
     </div>
     {% endfor %}
 
