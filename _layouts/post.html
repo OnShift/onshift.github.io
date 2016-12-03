@@ -6,6 +6,8 @@ layout: default
 <article class="post">
   <h1>{{ page.title }}</h1>
 
+  <div class="date mt-sm mb-sm">{{ page.date | date: "%B %e, %Y" }}</div>
+
   <div class="entry">
     {{ content }}
   </div>
@@ -23,8 +25,15 @@ layout: default
   </div>
   {% endif %}
 
-  <div class="date mt-md">
-    Written on {{ page.date | date: "%B %e, %Y" }} by <a href="/about/#author-{{ page.author }}">{{ author.full_name }}</a>
+  <div class="info mt-md">
+    Written on <div class="date">{{ page.date | date: "%B %e, %Y" }} by 
+    <div class="author">
+    {% if site.data.people[page.author] %}
+    <a href="/about/#author-{{ page.author }}">{{ site.data.people[page.author].full_name }}</a>
+    {% else %}
+    {{ page.author }}
+    {% endif %}
+    </div>
   </div>
 
   {% include disqus.html %}
