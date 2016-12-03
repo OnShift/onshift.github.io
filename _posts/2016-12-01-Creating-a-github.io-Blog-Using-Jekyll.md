@@ -3,6 +3,9 @@ layout: post
 author: dschaefer
 date: 2016-12-01 14:32:00 +0500
 title: Creating a github.io Blog Using Jekyll
+edits:
+  - date: 2016-12-03 14:03:00 +0500
+    description: Edited for grammar and clarification
 ---
 
 For OnShift's 2016 Q4 Engineering Hack Day, I decided to create a blog for our department to share with the world our passion for the technologies we've used here at OnShift. I felt that it was very appropriate to write the first post, explaining what I did to setup this very blog.
@@ -32,11 +35,11 @@ For the purposes of the initialization steps, I am assuming that the username/or
    git push origin master</code>
    </pre>
 
-The reason I chose to *copy* the repo instead of forking, is because we will be making a significant number of changes to the repo and it deviate so much that it would not make sense to contribute to the original project using the fork. If the original repo were to have any improvements that we would like to have in our our repo, we are still able to pull in the changes either by pulling from the original repo or by creating a git patch and apply it over top our repo. Either way, we will most likely need to resolve merge conflicts.
+The reason I chose to *copy* the repo instead of forking, is because we will be making a significant number of changes to the repo and it will deviate so much that it would not make sense to contribute to the original project using the fork. If the original repo were to have any improvements that we would like to have in our our repo, we are still able to pull in the changes either by pulling from the original repo or by creating a git patch and apply it over top our repo. Either way, we will most likely need to resolve merge conflicts. However, that does not stop us from contributing to the original repo via a forked repo.
 
 ## Customize
 
-One of the first things I did after the blog was up and running was to style it. We have a Front End Software Developer—Ali Orlando—that created a project called Flamingo to standardize our styles accross all projects. Flamingo is an extension of the Twitter Bootstrap framework. We have a working <a href="https://onshift.github.io/flamingo/">demo</a>.
+One of the first things I did after the blog was up and running was to style it. We have a Front End Software Developer—Ali Orlando—that created a project called Flamingo to standardize our styles accross all of OnShift's projects. Flamingo is an extension of the Twitter Bootstrap framework. We have a working <a href="https://onshift.github.io/flamingo/">demo</a>.
 
 ## Future
 

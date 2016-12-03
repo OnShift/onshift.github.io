@@ -10,7 +10,20 @@ layout: default
     {{ content }}
   </div>
 
-  <div class="date">
+  {% if page.edits %}
+  <div class="edits mt-md">
+
+    {% for edit in page.edits %}
+    <div class="edit">
+      <div class="heading">This post was edited on {{ edit.date | date: "%B %e, %Y %H:%m%p" }}</div>
+      <div class="description">{{ edit.description }}</div>
+    </div>
+    {% endfor %}
+
+  </div>
+  {% endif %}
+
+  <div class="date mt-md">
     Written on {{ page.date | date: "%B %e, %Y" }} by <a href="/about/#author-{{ page.author }}">{{ author.full_name }}</a>
   </div>
 

@@ -6,6 +6,23 @@
 /**************/
 /* BASE RULES */
 /**************/
+.post {
+  .date {
+      font-size: 120%;
+      border-top: 1px solid #ccc;
+  }
+  .edits {
+    /*border-top: 1px solid #ccc;*/
+    .edit {
+      font-size: 120%;
+      font-style: italic;
+      .heading {
+      }
+      .description {
+      }
+    }
+  }
+}
 
 .main-content {
   p, li {
