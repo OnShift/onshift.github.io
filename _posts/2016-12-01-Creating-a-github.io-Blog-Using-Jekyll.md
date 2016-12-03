@@ -1,11 +1,13 @@
 ---
 layout: post
 author: dschaefer
-date: 2016-12-01 14:32:00 +0500
+date: 2016-12-01 14:32:00 -0500
 title: Creating a github.io Blog Using Jekyll
 edits:
-  - date: 2016-12-03 14:03:00 +0500
+  - date: 2016-12-03 13:04:00 -0500
     description: Edited for grammar and clarification
+  - date: 2016-12-03 15:34:00 -0500
+    description: Edited for date correction
 ---
 
 For OnShift's 2016 Q4 Engineering Hack Day, I decided to create a blog for our department to share with the world our passion for the technologies we've used here at OnShift. I felt that it was very appropriate to write the first post, explaining what I did to setup this very blog.
