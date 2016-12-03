@@ -17,7 +17,7 @@ OnShift delivers cloud-based software and proactive services to solve everyday w
 <div class="authors">
   {% for author_hash in site.data.people %}
   {% assign author = author_hash[1] %}
-    <article class="author mt-md" id="author-{{ author_hash[0] }}">
+    <article class="author well mt-sm" id="author-{{ author_hash[0] }}">
 
       <div class="row">
         <div class="col-sm-2">
