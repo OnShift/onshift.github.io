@@ -36,6 +36,20 @@
   }
 }
 
+.photo-gallery {
+  list-style: none;
+  padding: 0;
+  li {
+    list-style: none;
+    padding: 2px 0;
+    display: inline-block;
+    width: 33%;
+    img {
+      width: 100%;
+    }
+  }
+}
+
 .site-avatar img {
   padding-bottom: 13px;
 }
