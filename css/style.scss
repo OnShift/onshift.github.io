@@ -7,9 +7,6 @@
 /* BASE RULES */
 /**************/
 .post {
-  h2 {
-    margin-top: 3rem;
-  }
   .date {
     font-style: italic;
   }
@@ -29,10 +26,13 @@
     font-size: 140%;
   }
 
-  h1 {
+  h1, h2, h3, h4 {
     a {
       color: inherit;
     }
+  }
+  h2 {
+    margin-top: 3rem;
   }
 }
 
