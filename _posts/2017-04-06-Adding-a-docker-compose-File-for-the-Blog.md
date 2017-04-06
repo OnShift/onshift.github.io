@@ -1,7 +1,7 @@
 ---
 layout: post
 author: dschaefer
-date: 2017-04-02 15:00:00 -0500
+date: 2017-04-06 13:30:00 -0500
 title: Adding a docker-compose File for the Blog
 ---
 
