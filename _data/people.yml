@@ -11,3 +11,18 @@ dschaefer:
     linkedin: danschaefer13
   bio: |
     I'm a Systems Engineer on Don't Panic (Ops Team) at OnShift. I was hired in March of 2015 as a developer on the Integrations Team and have moved over to the Ops Team as needs arose. I had a background as a full-stack PHP developer and bit of Operations experience before moving to OnShift. I now have plenty of experience with Ansible, Amazon Web Services, and various different types of hosting technologies.
+
+ilyaGotfryd:
+  first_name: Ilya
+  last_name: Gotfryd
+  full_name: Ilya Gotfryd
+  job_title: Sr. Software Engineer<br />Teach Lead
+  email: igotfryd@onshift.com
+  avatar: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/005/0a0/365/0b9ef79.jpg
+  handles:
+    github: ilyaGotfryd
+    linkedin: ilyakgotfryd
+    twitter: ikg_agent
+  bio:
+    I am a Teach Lead on a product delivery team - Strangers in the Alps. I have been hired to OnShift in April of 2016 as Sr. Dev for the core schedule product. As the team had shifted and evolved I moved into a Tech Lead position. My prior background in reverse order - Lead Instructor in <a href="https://www.thesoftwareguild.com/">The Software Guild </a> teaching Java full stack, Director of Information Systems leading <a href="https://www.clevemedsleepview.com"> SleepView SaaS</a> product for <a href="https://clevemed.com/">CleveMed</a> on Microsoft Technologies, and a Software Engineer in industrial automation in years prior.
+
