@@ -16,7 +16,7 @@ ilyaGotfryd:
   first_name: Ilya
   last_name: Gotfryd
   full_name: Ilya Gotfryd
-  job_title: Sr. Software Engineer<br />Teach Lead
+  job_title: Sr. Software Engineer<br />Tech Lead
   email: igotfryd@onshift.com
   avatar: https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/2/005/0a0/365/0b9ef79.jpg
   handles:
@@ -24,5 +24,18 @@ ilyaGotfryd:
     linkedin: ilyakgotfryd
     twitter: ikg_agent
   bio:
-    I am a Teach Lead on a product delivery team - Strangers in the Alps. I have been hired to OnShift in April of 2016 as Sr. Dev for the core schedule product. As the team had shifted and evolved I moved into a Tech Lead position. My prior background in reverse order - Lead Instructor in <a href="https://www.thesoftwareguild.com/">The Software Guild </a> teaching Java full stack, Director of Information Systems leading <a href="https://www.clevemedsleepview.com"> SleepView SaaS</a> product for <a href="https://clevemed.com/">CleveMed</a> on Microsoft Technologies, and a Software Engineer in industrial automation in years prior.
+    I am a Tech Lead on a product delivery team - Strangers in the Alps. I was hired at OnShift in April of 2016 as a Senior Developer for the core schedule product. As the team shifted and evolved, I moved into a Tech Lead position. My prior background in reverse order - Lead Instructor at <a href="https://www.thesoftwareguild.com/">The Software Guild </a> teaching Java full stack, Director of Information Systems leading <a href="https://www.clevemedsleepview.com"> SleepView SaaS</a> product for <a href="https://clevemed.com/">CleveMed</a> on Microsoft Technologies, and a Software Engineer in industrial automation in years prior.
+
+aliOrlando:
+  first_name: Ali
+  last_name: Orlando
+  full_name: Ali Orlando
+  job_title: Front End Developer
+  email: aorlando@onshift.com
+  avatar: https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAmkAAAAJGM4YzkzODc2LWY2NDItNDIyOS1hZWQzLTAyY2JlZjI1NjJiNg.jpg
+  handles:
+    github: aporlando
+    linkedin: alisonorlando
+  bio:
+    I am a Front End Developer for OnShift's UI/UX guild. I was hired at OnShift in May of 2016 to work closely with our User Experience team as well as OnShift's delivery teams. Previously a full stack developer at IBM UrbanCode and Big River, I've always had a passion for front end development and came to OnShift to pursue that passion.
 

@@ -13,10 +13,21 @@ path: /
         <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
         by
         <div class="author">
-        {% if site.data.people[post.author] %}
-          <a href="/about/#author-{{ post.author }}">{{ site.data.people[post.author].full_name }}</a>
+        {% if post.authors %}
+          {% for coauthor in post.authors %}
+            {% if site.data.people[coauthor] %}
+              <a href="/about/#author-{{ post.author }}">{{ site.data.people[coauthor].full_name }}</a>
+            {% else %}
+              {{ coauthor }}
+            {% endif %}
+            {% unless forloop.last %} and {% endunless %}
+          {% endfor %}
         {% else %}
-          {{ post.author }}
+          {% if site.data.people[post.author] %}
+            <a href="/about/#author-{{ post.author }}">{{ site.data.people[post.author].full_name }}</a>
+          {% else %}
+            {{ post.author }}
+          {% endif %}
         {% endif %}
         </div>
       </div>
