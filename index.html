@@ -5,7 +5,7 @@ path: /
 
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post well">
+    <article class="post card pa-md">
 
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
@@ -36,7 +36,7 @@ path: /
         {{ post.excerpt }}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
     </article>
   {% endfor %}
 </div>
