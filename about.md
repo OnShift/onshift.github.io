@@ -26,6 +26,16 @@ OnShift delivers cloud-based software and proactive services to solve everyday w
         <div class="col-sm-10">
           <h3>{{ author.full_name }}</h3>
           <h4>{{ author.job_title }}</h4>
+          <br />
+          {% if author.handles.github %}
+          <a href="http://github.com/{{ author.handles.github }}"><i class="svg-icon github"></i></a>
+          {% endif %}
+          {% if author.handles.linkedin %}
+          <a href="https://www.linkedin.com/in/{{ author.handles.linkedin }}/"><i class="svg-icon linkedin"></i></a>
+          {% endif %}
+          {% if author.handles.twitter %}
+          <a href="https://twitter.com/{{ author.handles.twitter }}"><i class="svg-icon twitter"></i></a>
+          {% endif %}
         </div>
       </div>
 
