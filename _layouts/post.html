@@ -26,13 +26,24 @@ layout: default
   {% endif %}
 
   <div class="info mt-md">
-    Written on <div class="date">{{ page.date | date: "%B %e, %Y" }} by 
+    Written on <div class="date">{{ page.date | date: "%B %e, %Y" }} by
     <div class="author">
-    {% if site.data.people[page.author] %}
-    <a href="/about/#author-{{ page.author }}">{{ site.data.people[page.author].full_name }}</a>
-    {% else %}
-    {{ page.author }}
-    {% endif %}
+        {% if page.authors %}
+          {% for coauthor in page.authors %}
+            {% if site.data.people[coauthor] %}
+              <a href="/about/#author-{{ page.author }}">{{ site.data.people[coauthor].full_name }}</a>
+            {% else %}
+              {{ coauthor }}
+            {% endif %}
+            {% unless forloop.last %},{% endunless %}
+          {% endfor %}
+        {% else %}
+          {% if site.data.people[page.author] %}
+            <a href="/about/#author-{{ page.author }}">{{ site.data.people[page.author].full_name }}</a>
+          {% else %}
+            {{ page.author }}
+          {% endif %}
+        {% endif %}
     </div>
   </div>
 

@@ -1,6 +1,8 @@
 ---
 layout: post
-author: ilyaGotfryd
+authors:
+    - ilyaGotfryd
+    - aliOrlando
 date: 2017-08-07 13:30:00 -0500
 title: Refactoring with React.js Components Inside Out
 ---
