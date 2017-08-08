@@ -4,7 +4,7 @@ authors:
     - ilyaGotfryd
     - aliOrlando
 date: 2017-08-07 13:30:00 -0500
-title: Refactoring with React.js Components Inside Out
+title: Refactoring with React.js Components Inside Out - Part 1
 ---
 Are you working through wads of unruly JavaScript that accumulated in your web app over the years? Would you like to bring in a concise and testable framework into its place?
 
