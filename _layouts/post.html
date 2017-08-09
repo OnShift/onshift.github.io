@@ -31,7 +31,7 @@ layout: default
         {% if page.authors %}
           {% for coauthor in page.authors %}
             {% if site.data.people[coauthor] %}
-              <a href="/about/#author-{{ page.author }}">{{ site.data.people[coauthor].full_name }}</a>
+              <a href="/about/#author-{{ coauthor }}">{{ site.data.people[coauthor].full_name }}</a>
             {% else %}
               {{ coauthor }}
             {% endif %}
