@@ -20,13 +20,7 @@
   <body>
     <nav class="navbar navbar-utility">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#productNav" aria-expanded="false">
-            <i class="fa fa-bars"></i>
-          </button>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="productNav">
+        <div id="productNav">
           <ul class="nav navbar-nav">
             <li><a href="https://www.onshift.com/">OnShift</a></li>
             <li class="active"><a href="/">Engineering Blog<span class="sr-only">(current)</span></a></li>
@@ -36,32 +30,22 @@
     </nav>
 
     <div class="container">
-        <div class="row">
-            <div class="col-sm-8">
-                <div class="mb-md mt-md mr-sm">
-                    <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-                    <span class="h2 product">{{ site.name }}</span>
+        <div class="flex flex-center mb-md mt-md flex-wrap">
+            <div class="flex-0-auto">
+                <div class="mr-sm">
+                    <a href="{{ site.baseurl }}/" class="h2 logo"><img src="{{ site.avatar }}" /></a>
+                    <span class="h2 product schedule">{{ site.name }}</span>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <h3 class="unbold text-right mt-lg">{{ site.description }}</h3>
+            <div class="flex-1-auto hidden-xs">
+                <div class="h3 unbold text-right">{{ site.description }}</div>
             </div>
         </div>
     </div>
 
     <nav class="navbar navbar-schedule">
       <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand visible-xs" href="/">
-                )°( Engineering Blog
-            </a>
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#primaryNav">
-              <i class="fa fa-bars"></i>
-            </button>
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="primaryNav">
+        <div id="primaryNav">
           <ul class="nav navbar-nav">
             <li{% if page.path == "/" %} class="active"{% endif %}><a href="{{ site.baseurl }}/">Blog</a></li>
             <li{% if page.path == "/about/" %} class="active"{% endif %}><a href="{{ site.baseurl }}/about">About</a></li>
