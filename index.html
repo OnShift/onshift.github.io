@@ -7,16 +7,16 @@ path: /
   {% for post in site.posts %}
     <article class="post card pa-md">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+      <h3 class="mt-0"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
 
-      <div class="info mt-sm mb-sm">
+      <div class="info mt-sm mb-sm text-uppercase text-muted small">
         <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
-        by
+        &middot; by
         <div class="author">
         {% if post.authors %}
           {% for coauthor in post.authors %}
             {% if site.data.people[coauthor] %}
-              <a href="/about/#author-{{ post.author }}">{{ site.data.people[coauthor].full_name }}</a>
+              <a href="/about/#author-{{ coauthor }}">{{ site.data.people[coauthor].full_name }}</a>
             {% else %}
               {{ coauthor }}
             {% endif %}
