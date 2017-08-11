@@ -4,8 +4,9 @@ authors:
     - ilyaGotfryd
     - aliOrlando
 date: 2017-08-08 13:30:00 -0500
-title: Refactoring with React.js Components Inside Out - Part 1
+title: Components Inside Out&#58; Refactoring a Legacy Application with React - Part 1
 ---
+
 Are you working through wads of unruly JavaScript that accumulated in your web app over the years? Would you like to bring in a concise and testable framework into its place?
 
 A common complication a developer experiences when looking to on-board a new frontend framework is how difficult it is to do so incrementally. In this post I would like to describe the journey our team underwent to make that a reality in our Python backed monolith project.
@@ -139,5 +140,7 @@ Each line includes a comment to explain the process, but let's summarize:
   * Finds a corresponding component class by name from the registry
   * Calls render with proper Component and a list of stored properties
 
-# Coming Soon - Part 2
-We discuss the developer [setup and testing](#)
+# Next:
+[Shared State: Refactoring Legacy Applications with React - Part 2]({% post_url 2017-08-15-Refactoring-with-reactJS-shared-state %})
+
+We discuss sharing state the between the legacy code and React components.
