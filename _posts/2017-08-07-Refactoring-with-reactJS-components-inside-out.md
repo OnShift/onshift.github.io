@@ -4,39 +4,14 @@ authors:
     - ilyaGotfryd
     - aliOrlando
 date: 2017-08-08 13:30:00 -0500
-title: Refactoring with React.js Components Inside Out - Part 1
+title: Components Inside Out&#58; Refactoring a Legacy Application with React - Part 1
+edits:
+  - date: 2017-08-11 17:00:00 -0500
+    description: Moved introduction to its own post
 ---
 Are you working through wads of unruly JavaScript that accumulated in your web app over the years? Would you like to bring in a concise and testable framework into its place?
 
-A common complication a developer experiences when looking to on-board a new frontend framework is how difficult it is to do so incrementally. In this post I would like to describe the journey our team underwent to make that a reality in our Python backed monolith project.
-
-# What we are going to cover
-
-In the following several posts we will document the following journey:
-* Component and it's presentation in HMTL
-* Using a bit of jQuery to glue DOM and React.JS components together
-* Developer setup necessary to accomplish this
-* Testing the components
-* Ways to trade state with jQuery and plain JavaScript
-
-# What are the benefits we are looking for?
-
-### Individual components mixed in with existing HTML
-
-We want the ability to grow our refactoring incrementally. This way we can narrow our React changes down to individual stories. This allows us to fulfill the requirements of Product Owners and other stakeholders while progressivly removing tech debt and improving clarity.
-
-### Front end testability and common implementation patterns
-
-Using React.JS framework allows us to create code that would be fully tested and testable with an abundance of HOW-TO documentation out of the gate.
-
-### Leverage CDN to preload components and render @client
-
-As we are moving our DOM rendering to the client we will no longer spend server time constructing partial views and sending them to the customer. This will lower the consistent web traffic and allow us to slowly shift our monolith to become a REST service.
-
-### Build with “shiny” battle hardened tools similar across OnShift
-
-React.JS is an industry accepted UI microframework that is heavily used and supported by a large community. OnShift has newer offerings built using this technology and we want to leverage all of tech findings in our legacy application without engaging in a major frontend rewrite.
-
+In this post, we're going to jump in to the approach that we've taken here at OnShift to start refactoring our legacy front-end using React. Previously, this post included some background that we've chosen to move to its own introductory post [Refactoring a Legacy Application with React - Introduction]({% post_url 2017-08-11-Refactoring-with-reactJS-introduction %}). If you feel a bit lost, you should start there.
 
 # The Component
 
