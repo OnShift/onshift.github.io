@@ -19,7 +19,8 @@ In this post, we're going to jump in to the approach that we've taken here at On
 We mentioned in the Introduction that being able to refactor in small, incremental steps is important to the success of this project. We'll have small UI changes driving the creation of React components in our application. We'll be able to focus on small parts of the UI and grow out from there until an entire page is written using React. The first step we need to take is to write a small, contained React component.
 
 ## A Simple Component
-Let's start with a simple React component, `FailureBanner` that we want to display in our jQuery legacy application. Let's suppose this component displays an alert message and is displayed conditionally to the user, like so:
+
+Let's start with a simple React component, `FailureBanner` that we want to display in our jQuery legacy application. The component displays an alert with an icon and a message when when its `isShown` prop is truthy.
 
 {% highlight javascript linenos %}
 import React from 'react';
@@ -32,7 +33,7 @@ export default class FailureBanner extends React.Component {
                 <div className="flamingo">
                     <div role="alert" className="alert alert-danger" id="msg-text">
                         <div className="alert-left flex-center">
-                            <i className="fa fa-check fa-lg" aria-hidden="true"></i>
+                            <i className="fa fa-ban fa-lg" aria-hidden="true"></i>
                         </div>
                         <p>{this.props.message}</p>
                     </div>
@@ -62,9 +63,9 @@ We decided to leverage [data attributes](https://developer.mozilla.org/en-US/doc
 {% highlight html linenos %}
 <div data-react-component="FailureBanner" data-message="This is an excellent functional control." data-is-shown="false"> </div>
 {% endhighlight %}
-The `data-message` and `data-is-shown` attributes will be pulled into each component as properties with lower camel case names `message` and `isShown`.
+Using jQuery's `.data()` function, we can transform the data attributes into camel case props `message` and `isShown`. We'll use the `data-message` and `data-is-shown` attributes as the component's props in just a moment.
 
-## The Glue
+## The Glue: Initial Rendering of Multiple Components into the DOM
 
 So we have a React component and we have an HTML tag with some data attributes that are related to the component. Now we actually need to render the component into the appropriate DOM tags. Since we want to start our refactor efforts small, we need a way to render multiple small React components into the DOM. For example, we might want to have 3 separate `FailureBanner` components on the same page and render them with the appropriate props.
 
