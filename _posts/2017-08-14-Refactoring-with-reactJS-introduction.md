@@ -9,7 +9,7 @@ title: Refactoring a Legacy Application with React - Introduction
 
 Are you working through wads of unruly JavaScript that accumulated in your web app over the years? Would you like to bring in a concise and testable framework into its place?
 
-A common complication a developer experiences when looking to on-board a new frontend framework is how difficult it is to do so incrementally. In this 4-part series of posts, I would like to describe the journey our team underwent to make that a reality in our Python backed monolith project.
+A common complication a developer experiences when looking to on-board a new frontend framework is how difficult it is to do so incrementally. In this 4-part series of posts, we would like to describe the journey our team underwent to make that a reality in our Python backed monolith project.
 
 # About the Series
 In this post, we explain some background and context around the legacy application we want to improve upon and why we chose React. If you want to jump into the approach, you can jump in to one of the relevant series topics:
