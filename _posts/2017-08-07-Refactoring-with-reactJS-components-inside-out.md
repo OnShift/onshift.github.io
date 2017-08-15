@@ -10,9 +10,9 @@ edits:
   - date: 2017-08-14 17:00:00 -0500
     description: Moved the series introduction to its own post, updated the flow of the document, improved code highlighting
 ---
-*Note: This post is part of a series, starting with [Refactoring a Legacy Application with React - Introduction]({% post_url 2017-08-11-Refactoring-with-reactJS-introduction %})*
+*Note: This post is part of a series, starting with [Refactoring a Legacy Application with React - Introduction]({% post_url 2017-08-14-Refactoring-with-reactJS-introduction %})*
 
-In this post, we're going to jump in to the approach that we've taken here at OnShift to start refactoring our legacy front-end using React. Previously, this post included some background that we've chosen to move to its own introductory post [Refactoring a Legacy Application with React - Introduction]({% post_url 2017-08-11-Refactoring-with-reactJS-introduction %}). If you feel a bit lost, you should start there.
+In this post, we're going to jump in to the approach that we've taken here at OnShift to start refactoring our legacy front-end using React. Previously, this post included some background that we've chosen to move to its own introductory post [Refactoring a Legacy Application with React - Introduction]({% post_url 2017-08-14-Refactoring-with-reactJS-introduction %}). If you feel a bit lost, you should start there.
 
 # Refactoring Inside Out
 

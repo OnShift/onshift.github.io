@@ -3,7 +3,7 @@ layout: post
 authors:
     - ilyaGotfryd
     - aliOrlando
-date: 2017-08-08 13:30:00 -0500
+date: 2017-08-14 21:00:00 -0500
 title: Refactoring a Legacy Application with React - Introduction
 ---
 
