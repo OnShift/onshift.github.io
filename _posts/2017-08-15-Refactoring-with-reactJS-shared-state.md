@@ -17,11 +17,11 @@ State management is something that React components do well on their own. Each c
 
 In our case, we needed to have control over state from outside of React. With years of built up jQuery code, there’s a lot happening on our legacy front end and we needed the ability to update our React components in response to actions happening elsewhere on the page.
 
-# So what's a dev to do?
+# How do we update component props?
 
 One solution I’ve seen before is to unmount the React component, then re-render the component into the DOM with the updated props. It’s a workable solution, but I’ve always disliked it because it completely ignores one of the biggest benefits of using React: the [Virtual DOM](https://www.codecademy.com/articles/react-virtual-dom).
 
-Instead, we took a look around and decided that we needed an application state management solution. In our greenfield React project we use Redux to manage application state. Since we already had this knowledge on the team, we decided to use Redux in our legacy refactoring as well. You could probably just as easily use a reactive library like RxJS. We’ll have to leave that as an exercise for another day.
+Instead, we took a look around and decided that we needed an application state management solution. In our greenfield React project we use Redux to manage application state. Since we already had this knowledge on the team, we decided to use Redux in our legacy refactoring as well. One could probably just as easily use a reactive library like RxJS. We’ll have to leave that as an exercise for another day.
 
 # Using the Redux State in React
 
@@ -30,4 +30,7 @@ Instead, we took a look around and decided that we needed an application state m
 # Interacting with State in Legacy JavaScript
 
 <!-- Write about using the global Redux store to dispatch actions from our legacy code -->
+
+# Next: Unit Testing components
+One of the major goals of this refactor effort was creating maintainable and testable code. Find out how we're testing our new React code in the next part of this series!
 
