@@ -8,7 +8,7 @@ title: Testing and infrastructure&#58; Refactoring a Legacy Application in React
 test_tools:
  - image_path: /images/karma_icon.png
    tool_name: Karma
-   tool_description: A trusty test runner that provides multiple browsers including PhantomJS and various pre-processing plugins.
+   tool_description: The main goal for Karma is to bring a productive testing environment to developers. The environment being one where they don't have to set up loads of configurations, but rather a place where developers can just write the code and get instant feedback from their tests.
    tool_url: https&#58;//karma-runner.github.io/1.0/index.html
  - image_path: /images/mocha_icon.png
    tool_name: Mocha
@@ -18,6 +18,10 @@ test_tools:
    tool_name: Chai
    tool_description: BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
    tool_url: http&#58;//chaijs.com/
+ - image_path: /images/sinon_icon.png
+   tool_name: Sinon
+   tool_description: Standalone test spies, stubs and mocks for JavaScript. Works with any unit testing framework.
+   tool_url: http&#58;//sinonjs.org/
 ---
 
 
@@ -39,16 +43,13 @@ with testing completely a new.<br />
 **So here is our tool set:**
 {% assign toolz = page.test_tools %}
 <div class="container">
-<ul>
     {% for tool in toolz %}
-        <il> <div class="row">
-        <div class="col-md-1">
+        <div class="row">
+        <div class="col-md-1 vcenter">
         <a href="{{tool.tool_url}}"><img class="tool-icon" src="{{ tool.image_path }}"  /></a>
-        </div><div class="col-md-11">
-        {{ tool.tool_name }} - {{ tool.tool_description }}
+        </div><div class="col-md-10 vcenter">
+        <b>{{ tool.tool_name }}</b> - {{ tool.tool_description }}
         </div></div>
-        </il>
     {% endfor %}
-</ul>
 </div>
 
