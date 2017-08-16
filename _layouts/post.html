@@ -12,22 +12,9 @@ layout: default
     {{ content }}
   </div>
 
-  {% if page.edits %}
-  <div class="edits">
-
-    {% for post_edit in page.edits %}
-    <div class="edit mt-md">
-      <div class="heading">This post was edited on {{ post_edit.date | date: "%B %e, %Y %I:%M%p" }}</div>
-      <div class="description">{{ post_edit.description }}</div>
-    </div>
-    {% endfor %}
-
-  </div>
-  {% endif %}
-
   <div class="info mt-md">
-    Written on <div class="date">{{ page.date | date: "%B %e, %Y" }} by
-    <div class="author">
+    Written on <span class="date">{{ page.date | date: "%B %e, %Y" }} by</span>
+      <span class="author">
         {% if page.authors %}
           {% for coauthor in page.authors %}
             {% if site.data.people[coauthor] %}
@@ -44,8 +31,21 @@ layout: default
             {{ page.author }}
           {% endif %}
         {% endif %}
-    </div>
+    </span>
   </div>
+
+  {% if page.edits %}
+  <div class="edits">
+
+    {% for post_edit in page.edits %}
+    <div class="edit mt-md">
+      <div class="heading">This post was edited on {{ post_edit.date | date: "%B %e, %Y %I:%M%p" }}</div>
+      <div class="description">{{ post_edit.description }}</div>
+    </div>
+    {% endfor %}
+
+  </div>
+  {% endif %}
 
   {% include disqus.html %}
 </article>
