@@ -9,8 +9,15 @@ test_tools:
  - image_path: /images/karma_icon.png
    tool_name: Karma
    tool_description: A trusty test runner that provides multiple browsers including PhantomJS and various pre-processing plugins.
-   tool_url: https://karma-runner.github.io/1.0/index.html
-     
+   tool_url: https&#58;//karma-runner.github.io/1.0/index.html
+ - image_path: /images/mocha_icon.png
+   tool_name: Mocha
+   tool_description: Feature-rich JavaScript test framework running on Node.js
+   tool_url: https&#58;//mochajs.org/
+ - image_path: /images/chai_icon.png
+   tool_name: Chai
+   tool_description: BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
+   tool_url: http&#58;//chaijs.com/
 ---
 
 
@@ -31,9 +38,17 @@ things that have been deployed. That being said you might pick a different set o
 with testing completely a new.<br />
 **So here is our tool set:**
 {% assign toolz = page.test_tools %}
+<div class="container">
 <ul>
     {% for tool in toolz %}
-        <il> <a href=""><img src="{{ tool.image_path }}"></img></a>
-        {{ tool.tool_name }} - {{ tool.tool_description }} </il>
+        <il> <div class="row">
+        <div class="col-md-1">
+        <a href="{{tool.tool_url}}"><img class="tool-icon" src="{{ tool.image_path }}"  /></a>
+        </div><div class="col-md-11">
+        {{ tool.tool_name }} - {{ tool.tool_description }}
+        </div></div>
+        </il>
     {% endfor %}
 </ul>
+</div>
+
