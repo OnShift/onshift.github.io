@@ -9,6 +9,8 @@ excerpt: In this post, we're going to jump in to the approach that we've taken h
 edits:
   - date: 2017-08-14 17:00:00 -0500
     description: Moved the series introduction to its own post, updated the flow of the document, improved code highlighting
+  - date: 2017-08-18 17:00:00 -0500
+    description: Add link to Part 2
 ---
 *Note: This post is part of a series, starting with [Refactoring a Legacy Application with React - Introduction]({% post_url 2017-08-14-Refactoring-with-reactJS-introduction %})*
 
@@ -119,6 +121,6 @@ Each line includes a comment to explain the process, but let's summarize:
 This piece accomplishes the initial rendering of React components into our DOM with the appropriate props.
 
 # Next:
-[Shared State: Refactoring Legacy Applications with React - Part 2]({% post_url 2017-08-15-Refactoring-with-reactJS-shared-state %})
+[Shared State: Refactoring Legacy Applications with React - Part 2]({% post_url 2017-08-18-Refactoring-with-reactJS-shared-state %})
 
-Now that we have React components rendered into our pages, we need to explore how we update the components in response to actions elsewhere on the page. [Join us in Part 2]({% post_url 2017-08-15-Refactoring-with-reactJS-shared-state %}) where we'll talk about our solution for shared state management between React and legacy JavaScript code.
+Now that we have React components rendered into our pages, we need to explore how we update the components in response to actions elsewhere on the page. [Join us in Part 2]({% post_url 2017-08-18-Refactoring-with-reactJS-shared-state %}) where we'll talk about our solution for shared state management between React and legacy JavaScript code.
