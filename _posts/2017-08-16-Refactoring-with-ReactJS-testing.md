@@ -88,30 +88,30 @@ We started all the way at the top with NPM adding a command to execute our karma
 That leads us to our karma file configuration:
 ```json
 module.exports = function(config){
-    config.set(
-        {
-        // ...
-        files: [                            // files that get loaded into Mocha testing context
-            // ...
-            'js/components.js',                 // transpiled code that is being tested
-            'test/mocha/specs/**/*.spec.js'],   // masked path to all of the test files
-        preprocessors: {
-                'jsx/**/*.jsx': ['browserify'] ,  // path to transpile components and associated files
-                'test/**/*.js': ['browserify']    // path to transpile test files
-            },
+  config.set(
+  {
+    // ...
+    files: [                              // files that get loaded into Mocha testing context
+      // ...
+      'js/components.js',                 // transpiled code that is being tested
+      'test/mocha/specs/**/*.spec.js'],   // masked path to all of the test files
+    preprocessors: {
+      'jsx/**/*.jsx': ['browserify'] ,    // path to transpile components and associated files
+      'test/**/*.js': ['browserify']      // path to transpile test files
+    },
 
-            browserify: {
-                debug: true,
-                transform: [
-                    // when transpiling components ignore tests
-                    ['babelify', {presets: ['es2015', 'react'], ignore: 'test/**/*.js'}],
-                    // when transpiling tests exlude components
-                    ['babelify', {presets: ['es2015'], ignore: 'jsx/**/*.jsx'}]
-                ],
-            },
-        // ...
-        });
-        }
+    browserify: {
+      debug: true,
+      transform: [
+        // when transpiling components ignore tests
+        ['babelify', {presets: ['es2015', 'react'], ignore: 'test/**/*.js'}],
+        // when transpiling tests exlude components
+        ['babelify', {presets: ['es2015'], ignore: 'jsx/**/*.jsx'}]
+      ],
+    },
+    // ...
+  });
+}
 ```
 
 The rest of the Karma configuration is standard base layout using PhantomJS for DOM container.
