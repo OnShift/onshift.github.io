@@ -1,10 +1,11 @@
 ---
 layout: post
-authors:
-    - aliOrlando
-date: 2017-08-10 13:30:00 -0500
-title: Shared State&#58; Refactoring a Legacy Application with React - Part 2
+author: aliOrlando
+date: 2017-08-18 13:30:00 -0500
+title: "Shared State: Refactoring a Legacy Application with React - Part 2"
+excerpt: "When we started on this whole project of finding a pattern to refactor in React, we knew we wanted to keep the effort small. Everyone was on the same page: let’s get React in and get it rendering something."
 ---
+*Note: This post is part of a series, starting with [Refactoring a Legacy Application with React - Introduction]({% post_url 2017-08-14-Refactoring-with-reactJS-introduction %})*
 
 When we started on this whole project of finding a pattern to refactor in React, we knew we wanted to keep the effort small. Everyone was on the same page: let’s get React in and get it rendering something. If you’ve read Part 1, then you know that we got there. We have React components rendered into the page. Yay! Problem solved!
 
