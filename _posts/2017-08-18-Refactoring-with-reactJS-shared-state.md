@@ -15,7 +15,7 @@ State management.
 
 State management is something that React components do well on their own. Each component has its own state and lifecycle. When React components get to control all of their interactions and state by themselves, this works really well. You might not need any other state management solution in such a case.
 
-In our case, we needed to have control over state from outside of React. With years of built up jQuery code, there’s a lot happening on our legacy front end and we needed the ability to update our React components in response to actions happening elsewhere on the page.
+In our case, we needed to have control over state from outside of React. With years of built up jQuery code, there’s a lot happening on our legacy front end and we need the ability to update our React components in response to actions happening elsewhere on the page.
 
 # The Problem
 
@@ -71,13 +71,13 @@ In this example, we already have an instance of the `FailureBanner` rendered int
 
 One solution we’ve seen before is to unmount the React component, then re-render the component into the DOM with the updated props. It’s a workable solution, but we’ve always disliked it because it completely ignores one of the biggest benefits of using React: the [Virtual DOM](https://www.codecademy.com/articles/react-virtual-dom).
 
-Instead, we took a look around and decided that we needed an application state management solution. In our greenfield React project we use [Redux](http://redux.js.org/) to manage application state. Since we already had this knowledge on the team, we decided to use Redux in our legacy refactoring as well. One could probably just as easily use a reactive library like [RxJS](http://reactivex.io/rxjs/. We’ll have to leave that as an exercise for another day.
+Trying to keep our proof of concept to a minimum, we attempted to capture components at the time of creation and inject some form of function or object to give us global access to individual component's state. After several attempts with marginal degree of success we realized that we were creating a sufficiently complex home grown system that attempts to replicate existing technologies. For the sake of brevity and community support, we decided to turn to an industry accepted state management solution already used elsewhere in-house. In our greenfield React project we use [Redux](http://redux.js.org/) to manage application state. Since we already had this knowledge on the team, we decided to use Redux in our legacy refactoring as well. One could probably just as easily use a reactive library like [RxJS](http://reactivex.io/rxjs/. We’ll have to leave that as an exercise for another day.
 
 Our Redux store will be the source of truth for the application's state. Our React components will be connected to the store and can dispatch changes to the store and/or react to application state changes appropriately. Similarly, our legacy Javascript will be able to access the store and dispatch actions to change application state.
 
 # Create the Redux Store
 
-First, we need to create a Redux store for our application. We're going to keep this piece with the React initilization script from part 1. Since the store needs to be accessible from all of our legacy code, we decided to create the store as a global. Please keep your 'boos' to a light rumble.
+First, we need to create a Redux store for our application. We're going to keep this piece with the React initilization script from part 1. Since the store needs to be accessible from all of our legacy code we decided to take the meaning of "global store" literally and attach it to the window object. Please keep your 'boos' to a light rumble and stick with us. We promise it gets better.
 
 The new code here is line `11`, where we create the store using our reducer (which we'll cover next) and lines `29`-`34` where we wrap each component we render in `react-redux`'s `Provider` component to give it access to the store.
 
@@ -141,7 +141,7 @@ export default function(state = initialState, action) {
 }
 {% endhighlight %}
 
-Finally, we'll write an [action creator](https://daveceddia.com/redux-action-creators/) that creates the action object we want to dispatch when we want to change the Failure Banner state.
+Finally, we'll write an [action creator](https://daveceddia.com/redux-action-creators/) that creates the action object we want to dispatch when we want to change the Failure Banner state. This pattern allows for consistent readable code and ensures fewer typo-based failures, among other things.
 
 {% highlight javascript linenos %}
 function setFailureBanner(isShown = false, message = '') {
@@ -159,7 +159,7 @@ Now that we have a basic Redux store setup, we need to use the application state
 
 # Using the Redux State in React
 
-We'll address the most common pattern - using Redux with React. There are a lot of excellent resources that cover how to add Redux to your React application, including [this basic tutorial in the Redux docs](http://redux.js.org/docs/basics/). We trust that you're either familiar with the pattern or can read about it elsewhere, so we won't go into too much depth on the specifics.
+We'll address the most common pattern - using Redux with React. There are a lot of excellent resources that cover how to add Redux to your React application, including [this basic tutorial in the Redux docs](http://redux.js.org/docs/basics/). We trust that you're either familiar with the pattern or can read about it elsewhere, so we won't go into too much depth on the specifics. We made an effort to provide lightest seams possible in our implementation in order to preserve common uses of React and Redux. This means that all of the common implementation patterns and documentation do apply.
 
 We'll be using the [react-redux library](https://github.com/reactjs/react-redux) to make binding React components to the Redux store simple. The library provides the `connect` [higher order component](https://facebook.github.io/react/docs/higher-order-components.html) that we use to wrap our components and map them to the application state they care about.
 
