@@ -1,7 +1,9 @@
 ---
 layout: post
-author: aliOrlando
-date: 2017-08-18 13:30:00 -0500
+authors:
+    - aliOrlando
+    - ilyaGotfryd
+date: 2017-08-22 13:30:00 -0500
 title: "Shared State: Refactoring a Legacy Application with React - Part 2"
 excerpt: "When we started on this whole project of finding a pattern to refactor in React, we knew we wanted to keep the effort small. Everyone was on the same page: let’s get React in and get it rendering something."
 ---
