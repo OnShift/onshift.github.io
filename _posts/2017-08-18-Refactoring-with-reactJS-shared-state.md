@@ -13,7 +13,15 @@ As you probably know, solving a problem can have a way of creating more problems
 
 State management.
 
-State management is something that React components do well on their own. Each component has its own state and lifecycle. When React components get to control all of their interactions and state by themselves, this works really well. You might not need any other state management solution in such a case.
+Ok... what the heck does that mean?
+
+State management refers to how we are managing the data in our UI over time. For example, the state of the application tells us whether or not to display a certain piece of UI, which item a user has currently selected, or the current value of a text input on the page.
+
+Our legacy code relies almost entirely on direct DOM manipulation to achieve dynamic behavior. Click a button? We're listening for that button click, receiving the event, and doing all of our event handling and DOM manipulation in one handler. Should it update 20 places in the UI? We'll select all 20 places in the UI and update them in the handler. The DOM reflects the current state of the application and any JavaScript code we write handles whatever cases it should.
+
+Handling UI updates by manipulating 20 separate pieces of the DOM is _expensive_ and extremely _inefficient_. This is where a state management solution comes in.
+
+[Local state management](https://facebook.github.io/react/docs/state-and-lifecycle.html) is something that React provides as a feature out of the box. Each component has its own encapsulated state and lifecycle allowing it to define its own behavior. When React components control all of their interactions and state by themselves, this works really well. You might not need any other state management solution in such a case.
 
 In our case, we needed to have control over state from outside of React. With years of built up jQuery code, there’s a lot happening on our legacy front end and we need the ability to update our React components in response to actions happening elsewhere on the page.
 
@@ -69,9 +77,9 @@ In this example, we already have an instance of the `FailureBanner` rendered int
 
 # How do we update component props?
 
-One solution we’ve seen before is to unmount the React component, then re-render the component into the DOM with the updated props. It’s a workable solution, but we’ve always disliked it because it completely ignores one of the biggest benefits of using React: the [Virtual DOM](https://www.codecademy.com/articles/react-virtual-dom).
+One solution we’ve seen before is to unmount the React component, then re-render the component into the DOM with the updated props. It’s a workable solution, but it ignores one of the biggest benefits of using React: avoiding DOM manipulation via the [Virtual DOM](https://www.codecademy.com/articles/react-virtual-dom).
 
-Trying to keep our proof of concept to a minimum, we attempted to capture components at the time of creation and inject some form of function or object to give us global access to individual component's state. After several attempts with marginal degree of success we realized that we were creating a sufficiently complex home grown system that attempts to replicate existing technologies. For the sake of brevity and community support, we decided to turn to an industry accepted state management solution already used elsewhere in-house. In our greenfield React project we use [Redux](http://redux.js.org/) to manage application state. Since we already had this knowledge on the team, we decided to use Redux in our legacy refactoring as well. One could probably just as easily use a reactive library like [RxJS](http://reactivex.io/rxjs/. We’ll have to leave that as an exercise for another day.
+Trying to keep our proof of concept to a minimum, we attempted to capture components at the time of creation and inject some form of function or object to give us global access to individual component's state. After several attempts with marginal degree of success we realized that we were creating a sufficiently complex home grown system that attempts to replicate existing technologies. For the sake of brevity and community support, we decided to turn to an industry accepted state management solution already used elsewhere in-house. In our greenfield React project we use [Redux](http://redux.js.org/) to manage application state. Since we already had this knowledge on the team, we decided to use Redux in our legacy refactoring as well. One could probably just as easily use a reactive library like [RxJS](http://reactivex.io/rxjs/). We’ll have to leave that as an exercise for another day.
 
 Our Redux store will be the source of truth for the application's state. Our React components will be connected to the store and can dispatch changes to the store and/or react to application state changes appropriately. Similarly, our legacy Javascript will be able to access the store and dispatch actions to change application state.
 
