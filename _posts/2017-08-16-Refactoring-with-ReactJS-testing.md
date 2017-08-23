@@ -48,7 +48,7 @@ with testing completely a new.<br />
         <div class="row">
         <div class="col-md-1 vcenter">
         <a href="{{tool.tool_url}}"><img class="tool-icon" src="{{ tool.image_path }}"  /></a>
-        </div><div class="col-md-11 vcenter">
+        </div><div class="col-md-10 vcenter">
         <b>{{ tool.tool_name }}</b> - {{ tool.tool_description }}
         </div></div>
     {% endfor %}
