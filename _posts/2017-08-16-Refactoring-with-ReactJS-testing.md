@@ -4,7 +4,7 @@ authors:
  - ilyaGotfryd
  - aliOrlando
 date: 2017-08-16 01:30:00 -0500
-title: "Testing and infrastructure: Refactoring a Legacy Application in React - Part 3"
+title: "Testing and Infrastructure: Refactoring a Legacy Application in React - Part 3"
 test_tools:
  - image_path: /images/karma_icon.png
    tool_name: Karma
@@ -39,7 +39,7 @@ In this post we are going to cover the essential part that makes move to React a
 We start of with actual tools that we are using in our legacy stack. Our organization had prior in-depth front-end work 
 done in our legacy application. We have had a set of tools already in use and we decided to continue the trend and reuse
 things that have been deployed. That being said you might pick a different set of tools especially if you are starting
-with testing completely a new.<br />
+with testing completely anew.<br />
 **So here is our tool set:**
 {% assign toolz = page.test_tools %}
 <div class="container">
@@ -48,7 +48,7 @@ with testing completely a new.<br />
         <div class="col-md-1 vcenter">
         <a href="{{tool.tool_url}}"><img class="tool-icon" src="{{ tool.image_path }}"  /></a>
         </div><div class="col-md-10 vcenter">
-        <b>{{ tool.tool_name }}</b> - {{ tool.tool_description }}
+        <a href="{{tool.tool_url}}"><b>{{ tool.tool_name }}</b></a> - {{ tool.tool_description }}
         </div></div>
     {% endfor %}
 </div>
@@ -66,7 +66,7 @@ To give you a bit of guidance and a point of reference our file structure is pre
     |   |   └──failureBanner.jsx  <- sample react JS component
     |   ├──test
     |   |   ├──mocha
-    |   |   |   └──sepc
+    |   |   |   └──spec
     |   |   |       └──failureBanner.spec.js  <- Mocha test file
     |   |   ├──setup.jsx
     |   |   └──test_helper.jsx    <- custom built test helper code
