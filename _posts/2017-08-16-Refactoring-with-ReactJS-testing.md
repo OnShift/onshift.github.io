@@ -34,7 +34,6 @@ In this post we are going to cover the essential part that makes move to React a
   * Test utility configuration
   * Homegrown helper utilities
   * Basic DOM rendering tests
-  * Tests of changes in DOM rendering though events and state changes
   
 ## Tool set
 We start of with actual tools that we are using in our legacy stack. Our organization had prior in-depth front-end work 
@@ -189,6 +188,66 @@ At the line `9` you can see `data-test-component="failureBanner"` and when this 
 Now its time to look at the helper methods that we used here.
 
 # Test Helper Methods
+We were fortunate enough to happen upon an excellent [React/Redux](https://www.udemy.com/react-redux-tutorial/) course on Udemy tought by [Stephen Grider](https://github.com/StephenGrider).
+We have modified it to some degree to fit our needs but mostly retained the [original code](https://github.com/StephenGrider/AdvancedReduxCode).
+{% highlight javascript linenos %}
+import React from 'react';
+import reducers from '../jsx/reducers/index.jsx';
+import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom';
+import { createStore } from 'redux';
+import TestUtils from 'react-addons-test-utils';
+import chai, { expect } from 'chai';
+import chaiJquery from 'chai-jquery';
+import sinonChai from 'sinon-chai';
 
+//builder helper for simulating events
+//to add a function to jquery, $.fn.function
+$.fn.simulate = function(eventName, value) {
+    // 'this' is the jquery element this function was called on
+    if (value) {
+        this.val(value);
+    }
+
+    TestUtils.Simulate[eventName](this[0]);
+};
+
+// Takes a component class with optional props and state
+// Returns an object containing:
+//   instance - result of renderIntoDocument
+//   $el - DOM elements rendered by component
+function renderComponent(ComponentClass, props, state) {
+    const store = createStore(
+        reducers,
+        state
+    );
+
+    const instance = TestUtils.renderIntoDocument(
+        <Provider store={store}>
+            <ComponentClass {...props} />
+        </Provider>
+    );
+
+    const $el = findComponent(instance);
+
+    return {
+        instance,
+        $el
+    };
+}
+
+function findComponent(component) {
+    return $(ReactDOM.findDOMNode(component));
+}
+
+// set up chai-jquery (from chai jquery docs)
+chaiJquery(chai, chai.util, $);
+
+// extend chai assertions with sinon-chai
+chai.use(sinonChai);
+
+export { renderComponent, findComponent, expect };
+{% endhighlight %}
 # Conclusion
-Hope this gave you enough information to get you started with testing your newly baked ReactJS components. In the future ReactJS testing posts we will discuss testing components as the state changes.
+Hope this gave you enough information to get you started with testing your newly baked ReactJS components. 
+Stay tuned for testing ReactJS components with state changes and event simulations.
