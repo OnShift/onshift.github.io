@@ -5,6 +5,9 @@ authors:
     - aliOrlando
 date: 2017-08-08 10:00:00 -0500
 title: Refactoring a Legacy Application with React - Introduction
+edits:
+  - date: 2017-08-18 17:00:00 -0500
+    description: Added link to Part 2
 ---
 
 Are you working through wads of unruly JavaScript that accumulated in your web app over the years? Would you like to bring in a concise and testable framework into its place?
@@ -14,7 +17,8 @@ A common complication a developer experiences when looking to on-board a new fro
 # About the Series
 In this post, we explain some background and context around the legacy application we want to improve upon and why we chose React. If you want to jump into the approach, you can jump in to one of the relevant series topics:
 * [Part 1: Components Inside Out]({% post_url 2017-08-07-Refactoring-with-reactJS-components-inside-out %})
-* Part 2: Shared State (Coming Soon!)
+* [Part 2: Shared State]({% post_url 2017-08-18-Refactoring-with-reactJS-shared-state %})
+* Part 3: Unit Testing - Coming Soon!
 
 ## What we are going to cover
 
