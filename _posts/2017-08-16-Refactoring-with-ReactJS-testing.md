@@ -40,15 +40,18 @@ We start of with actual tools that we are using in our legacy stack. Our organiz
 
 **So here is our tool set:**
 {% assign toolz = page.test_tools %}
-<div class="container">
-    {% for tool in toolz %}
-        <div class="row">
-        <div class="col-md-1 vcenter">
-        <a href="{{tool.tool_url}}"><img class="tool-icon" src="{{ tool.image_path }}"  /></a>
-        </div><div class="col-md-10 vcenter">
-        <a href="{{tool.tool_url}}"><b>{{ tool.tool_name }}</b></a> - {{ tool.tool_description }}
-        </div></div>
-    {% endfor %}
+<div>
+  {% for tool in toolz %}
+      <div class="media">
+        <div class="media-left">
+          <a href="{{tool.tool_url}}"><img class="tool-icon" src="{{ tool.image_path }}"  /></a>
+        </div>
+        <div class="media-body">
+          <h4 class="media-heading"><a href="{{tool.tool_url}}">{{ tool.tool_name }}</a></h4>
+          {{ tool.tool_description }}
+        </div>
+      </div>
+  {% endfor %}
 </div>
 ## File structure
 To give you a bit of guidance and a point of reference, our file structure is presently arranged as follows:
