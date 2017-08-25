@@ -27,19 +27,17 @@ test_tools:
 
 *Note: This post is part of a series, starting with [Refactoring a Legacy Application with React - Introduction]({% post_url 2017-08-14-Refactoring-with-reactJS-introduction %})*
 
-In this post we are going to cover the essential part that makes move to React as a front-end framework so highly desirable. We are talking of course about testing.
+In this post we are going to cover the essential part that makes the move to React as a front-end framework so highly desirable. We are talking of course about testing.
 
 # Topics we cover
   * Tool set with short description of game pieces and choices
   * Test utility configuration
   * Homegrown helper utilities
   * Basic DOM rendering tests
-  
+
 ## Tool set
-We start of with actual tools that we are using in our legacy stack. Our organization had prior in-depth front-end work 
-done in our legacy application. We have had a set of tools already in use and we decided to continue the trend and reuse
-things that have been deployed. That being said you might pick a different set of tools especially if you are starting
-with testing completely anew.<br />
+We start of with actual tools that we are using in our legacy stack. Our organization had prior in-depth front-end work done in our legacy application. We have a set of tools already in use and we decided to continue the trend and reuse things that have been deployed. That being said, you might pick a different set of tools especially if you are starting with testing completely anew.
+
 **So here is our tool set:**
 {% assign toolz = page.test_tools %}
 <div class="container">
@@ -53,12 +51,12 @@ with testing completely anew.<br />
     {% endfor %}
 </div>
 ## File structure
-To give you a bit of guidance and a point of reference our file structure is presently arranged as follows:
+To give you a bit of guidance and a point of reference, our file structure is presently arranged as follows:
 ```
 \static
     ├──reactjs-components
     |   ├──js
-    |   |   └──components.js      <- transpiled output file 
+    |   |   └──components.js      <- transpiled output file
     |   ├──jsx
     |   |   ├──actions            <- actions folder
     |   |   ├──reducers           <- reducers folder
@@ -75,7 +73,8 @@ To give you a bit of guidance and a point of reference our file structure is pre
 ```
 
 ## Test Utility Configuration
-We started all the way at the top with NPM adding a command to execute our karma tests in the scripts section of the _package.json_ file:
+We started all the way at the top with NPM adding a command to execute our karma tests in the scripts section of the `package.json` file:
+
 {% highlight javascript linenos %}
 { "scripts":
     {
@@ -116,7 +115,9 @@ module.exports = function(config){
 The rest of the Karma configuration is standard base layout using PhantomJS for DOM container.
 
 # Tests
-Before exploring the unique utilities that we have used let's dive into a basic render test. We expect that you either have worked with Mocha/Chai before or would follow the following link for common documentation here: [mocha.js](https://mochajs.org/#getting-started) You will find link to Chai assertion framework a bit deeper into the page of the link included.
+
+Before exploring the unique utilities that we have used let's dive into a basic render test. We expect that you either have worked with Mocha/Chai before or can follow [mocha's _Getting Started_ documentation](https://mochajs.org/#getting-started) You will find more information on the Chai assertion framework included in mocha's documentation.
+
 {% highlight javascript linenos %}
 import { renderComponent, expect } from '../../test_helper.jsx';
 import FailureBanner from '../../../jsx/failureBanner.jsx';
@@ -139,24 +140,31 @@ Let's go through the code play-by-play:
 {% highlight javascript %}
   import { renderComponent, expect } from '../../test_helper.jsx';
 {% endhighlight %}
-Chai - the JS test assertion library uses function `expect`. We are importing `expect` from our helper simply because we have a wrapper for a regular Chai functionality that outputs a bit more of information if assertion fails.
+Chai - the JS test assertion library uses function `expect` for assertions. We are importing `expect` from our helper simply because we have a wrapper for a regular Chai functionality that outputs a bit more information if assertion fails.
+
 `renderComponent` is a generic component rendering wrapper that is suitable for any DOM rendering container. We will discuss it later as we are going through the helper code.
 
 {% highlight javascript %}
   import FailureBanner from '../../../jsx/failureBanner.jsx';
 {% endhighlight %}
+
 Importing tested component from its relative path. Here as everywhere you might notice that we are importing components with their JSX extensions. This is a shortcoming in our build configuration that we were not yet able to overcome. Presently if you omit JSX it will get resolved to JS and fail to find the component.
-<p />Following `describe` method is comes from Mocha framework to wrap a suit of tests.<p />
+
+Following `describe` method comes from Mocha framework for wrapping a suite of tests.
+
 Let's look inside `beforeEach` call and dive into a bit more of a detail on rendering the component for testing.
+
 {% highlight javascript linenos %}
 beforeEach(function(done){
-        component = renderComponent(FailureBanner, {message: 'test this failure message', isShown: true});
-        done();
-    });
+    component = renderComponent(FailureBanner, {message: 'test this failure message', isShown: true});
+    done();
+});
 {% endhighlight %}
-As we set out to render a component using our `renderComponent` helper method we have to pass in the ReactJS component being renderd as well as an object that reporesents properties we would like for this object to assume prior to rendering. As you can see the object is going to be shown with the included message.
+
+As we set out to render a component using our `renderComponent` helper method, we have to pass in the ReactJS component being rendered as well as an object that represents properties we would like for this object to assume prior to rendering. As you can see, the object is going to be shown with the included message.
+
 It is important to include `done` parameter into the function call and then to call it. We need to ensure that rendering of the object was completed before any tests have been performed on the rendered object. As you can see done parameter is a function that needs to be called to indicate that processing has been completed and the rest of the test can be executed.
-<p />
+
 Now let's take a look back at the component for reference in order to understand the assertion line.
 {% highlight javascript linenos %}
 import React from 'react';
@@ -181,15 +189,16 @@ export default class FailureBanner extends React.Component {
     }
 }
 {% endhighlight %}
-At the line `9` you can see `data-test-component="failureBanner"` and when this component is renderd this is the tag that we are latching on in this test.
+At the line `9` you can see `data-test-component="failureBanner"`. When this component is rendered, we'll be able to select it from the DOM using this data attribute and make assertions against it.
 {% highlight javascript %}
   expect(component.$el.data('test-component')).to.equal('failureBanner');
 {% endhighlight %}
 Now its time to look at the helper methods that we used here.
 
 # Test Helper Methods
-We were fortunate enough to happen upon an excellent [React/Redux](https://www.udemy.com/react-redux-tutorial/) course on Udemy tought by [Stephen Grider](https://github.com/StephenGrider).
+We were fortunate enough to happen upon an excellent [React/Redux](https://www.udemy.com/react-redux-tutorial/) course on Udemy taught by [Stephen Grider](https://github.com/StephenGrider).
 We have modified it to some degree to fit our needs but mostly retained the [original code](https://github.com/StephenGrider/AdvancedReduxCode).
+
 {% highlight javascript linenos %}
 import React from 'react';
 import reducers from '../jsx/reducers/index.jsx';
@@ -248,6 +257,7 @@ chai.use(sinonChai);
 
 export { renderComponent, findComponent, expect };
 {% endhighlight %}
+
 # Conclusion
-Hope this gave you enough information to get you started with testing your newly baked ReactJS components. 
+We hope this gave you enough information to get you started with testing your newly baked ReactJS components.
 Stay tuned for testing ReactJS components with state changes and event simulations.
