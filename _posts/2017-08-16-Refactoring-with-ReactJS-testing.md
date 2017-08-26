@@ -8,19 +8,19 @@ title: "Testing and Infrastructure: Refactoring a Legacy Application in React - 
 test_tools:
  - image_path: /images/karma_icon.png
    tool_name: Karma
-   tool_description: The main goal for Karma is to bring a productive testing environment to developers. The environment being one where they don't have to set up loads of configurations, but rather a place where developers can just write the code and get instant feedback from their tests.
+   tool_description: "We chose Karma as an industry accepted test container and aggregator. It was used for other projects in our system as they needed DOM rendering capabilities across multiple browser engines which Karma provides. <b>In their own words:</b> <i>The main goal for Karma is to bring a productive testing environment to developers. The environment being one where they don't have to set up loads of configurations, but rather a place where developers can just write the code and get instant feedback from their tests.</i>"
    tool_url: "https://karma-runner.github.io/1.0/index.html"
  - image_path: /images/mocha_icon.png
    tool_name: Mocha
-   tool_description: Feature-rich JavaScript test framework running on Node.js
+   tool_description: We had this tool included with our previous tests as well. We find it very convenient and powerful full featured test runner well suited for asynchronous nature of JavaScript.
    tool_url: "https://mochajs.org/"
  - image_path: /images/chai_icon.png
    tool_name: Chai
-   tool_description: BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework.
+   tool_description: BDD / TDD assertion library for node and the browser that can be delightfully paired with any javascript testing framework. Chai has a good number of assertion extensions suitable for various quirks of JavaScript object and value comparison.
    tool_url: "http://chaijs.com/"
  - image_path: /images/sinon_icon.png
    tool_name: Sinon
-   tool_description: Standalone test spies, stubs and mocks for JavaScript. Works with any unit testing framework.
+   tool_description: Standalone test spies, stubs and mocks for JavaScript. Works with any unit testing framework. Provides all of the desired capabilities of a call mocking framework one could ever want.
    tool_url: "http://sinonjs.org/"
 ---
 
@@ -124,9 +124,8 @@ import FailureBanner from '../../../jsx/failureBanner.jsx';
 describe("failure banner", function(){
     var component;
 
-    beforeEach(function(done){
+    beforeEach(function(){
         component = renderComponent(FailureBanner, {message: 'test this failure message', isShown: true});
-        done();
     })
 
     it("renders failure banner", function(){
@@ -188,8 +187,9 @@ At the line `9` you can see `data-test-component="failureBanner"` and when this 
 Now its time to look at the helper methods that we used here.
 
 # Test Helper Methods
-We were fortunate enough to happen upon an excellent [React/Redux](https://www.udemy.com/react-redux-tutorial/) course on Udemy tought by [Stephen Grider](https://github.com/StephenGrider).
-We have modified it to some degree to fit our needs but mostly retained the [original code](https://github.com/StephenGrider/AdvancedReduxCode).
+We were fortunate enough to happen upon an excellent [React/Redux](https://www.udemy.com/react-redux-tutorial/) course on Udemy tought by [Stephen Grider](https://github.com/StephenGrider). The course work covers complexities and proper implementation of React/Redux ecosystem in a great detail. It also extensively covers testing, outlining the approach instructor took in addresing various testing needs.
+We have adopted some of the tooling provided in that cours and modified it to some degree to fit our needs. If you were to visit this repository however you would observe that we mostly retained the [original code](https://github.com/StephenGrider/AdvancedReduxCode).
+Let's take a look at the code breakdown here.
 {% highlight javascript linenos %}
 import React from 'react';
 import reducers from '../jsx/reducers/index.jsx';
@@ -249,5 +249,7 @@ chai.use(sinonChai);
 export { renderComponent, findComponent, expect };
 {% endhighlight %}
 # Conclusion
-Hope this gave you enough information to get you started with testing your newly baked ReactJS components. 
-Stay tuned for testing ReactJS components with state changes and event simulations.
+We have just gone over test tools that we are using, file structure that we have adopted, configuration of our test utilities, writing of the actual tests and 3rd party test helpers.
+Hope this gave you enough information to get you started with testing your newly baked ReactJS components.
+<hr />
+__Stay tuned for testing ReactJS components with state changes and event simulations.__
