@@ -15,4 +15,16 @@
         </div>
     </div>
 </nav>
-<div class="pt-5 pb-5"></div>
+<div class="navbar-spacer"></div>
+<script type="text/javascript">
+$(function() {
+  function resetNavbarSpacer() {
+    var height = $('nav.navbar').outerHeight();
+    $('.navbar-spacer').css('height', height);
+  }
+  resetNavbarSpacer();
+  $(window).on('resize', function() {
+    resetNavbarSpacer();
+  });
+});
+</script>
