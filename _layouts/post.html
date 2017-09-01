@@ -36,11 +36,10 @@ layout: default
 
   {% if page.edits %}
   <div class="edits">
-
     {% for post_edit in page.edits %}
     <div class="edit mt-3">
-      <div class="heading">This post was edited on {{ post_edit.date | date: "%B %e, %Y %I:%M%p" }}</div>
-      <div class="description">{{ post_edit.description }}</div>
+      <div class="heading"><em>This post was edited on {{ post_edit.date | date: "%B %e, %Y %I:%M%p" }}</em></div>
+      <div class="description"><em>{{ post_edit.description }}</em></div>
     </div>
     {% endfor %}
 
