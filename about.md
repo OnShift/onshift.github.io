@@ -1,8 +1,8 @@
 ---
 layout: page
 title: About Us
-path: /about/
-permalink: /about/
+path: /about
+permalink: /about
 ---
 
 <div class="card pa-md mt-sm">

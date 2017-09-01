@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand navbar-light bg-white fixed-top">
+    <div class="container d-flex flex-wrap">
+        <div class="navbar-brand d-flex align-items-center flex-wrap">
+            <a href="{{ site.baseurl }}/" class="mr-2"><img height="40" src="{{ site.avatar }}" /></a>
+            <span class="os-green h4 mt-0 mb-0">{{ site.name }}</span>
+        </div>
+        <div class="justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                {% for navitem in site.data.navigation %}
+                <li class="nav-item{% if page.path==navitem.path %} active{% endif %}">
+                    <a class="nav-link" href="{{ navitem.path }}">{{ navitem.title }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="pt-5 pb-5"></div>
