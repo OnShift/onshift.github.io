@@ -7,73 +7,12 @@
 /**************/
 /* BASE RULES */
 /**************/
+html {
+  height: 100%;
+}
 body {
   font-size: 16px;  //increase font-size for the blog
-}
-
-.bg-os-green {
-  background-color: $os-green;
-}
-.bg-os-gray {
-  background-color: $os-gray;
-}
-.bg-os-blue {
-  background-color: $os-blue;
-}
-.bg-os-purple {
-  background-color: $os-purple;
-}
-.bg-os-yellow {
-  background-color: $os-yellow;
-}
-.bg-os-orange {
-  background-color: $os-orange;
-}
-.bg-os-red {
-  background-color: $os-red;
-}
-
-.os-green {
-  color: $os-green;
-}
-.os-gray {
-  color: $os-gray;
-}
-.os-blue {
-  color: $os-blue;
-}
-.os-purple {
-  color: $os-purple;
-}
-.os-yellow {
-  color: $os-yellow;
-}
-.os-orange {
-  color: $os-orange;
-}
-.os-red {
-  color: $os-red;
-}
-
-h1, h2, h3, h4 {
-  a {
-    color: inherit;
-  }
-}
-h2 {
-  margin-top: 3rem;
-}
-h1, h3, h4 {
-  margin-top: 1rem;
-}
-h1[id],
-h2[id],
-h3[id],
-h4[id],
-h5[id],
-h6[id] {
-    margin-top: -120px;
-    padding-top: 120px;
+  height: 100%;
 }
 
 .photo-gallery {
@@ -94,11 +33,9 @@ h6[id] {
   padding-bottom: 13px;
 }
 
-footer {
-    text-align: center;
-}
-
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "brand";
+@import "type";
 @import "highlights";
-@import "svg-icons"
+@import "svg-icons";
