@@ -9,15 +9,15 @@ path: /
         <div class="card-body">
             <h3 class="mt-0"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
             <div class="info mt-1 mb-1 text-uppercase text-muted small">
-                <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
+                <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
                 &middot; by
-                <div class="author">
+                <span class="author">
                     {% if post.authors %} {% for coauthor in post.authors %}
                     {% if site.data.people[coauthor] %}
                     <a href="/about/#author-{{ coauthor }}">{{ site.data.people[coauthor].full_name }}</a>
                     {% else %}{{ coauthor }} {% endif %} {% unless forloop.last %} and {% endunless %} {% endfor %} {% else %} {% if site.data.people[post.author] %}
                     <a href="/about/#author-{{ post.author }}">{{ site.data.people[post.author].full_name }}</a> {% else %} {{ post.author }} {% endif %} {% endif %}
-                </div>
+                </span>
             </div>
             <div class="entry mb-2">
                 {{ post.excerpt }}
