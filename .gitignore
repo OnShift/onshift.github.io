@@ -1,5 +1,6 @@
 _site
 .DS_Store
+.idea
 .jekyll
 .jekyll-metadata
 .bundle
@@ -8,3 +9,4 @@ Gemfile
 Gemfile.lock
 node_modules
 package.json
+
