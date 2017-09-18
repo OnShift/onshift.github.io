@@ -47,9 +47,9 @@ We start of with actual tools that we are using in our legacy stack. Our organiz
         <div class="media-left">
           <a href="{{tool.tool_url}}"><img class="tool-icon" src="{{ tool.image_path }}"  /></a>
         </div>
-        <div class="media-body">
-          <h4 class="media-heading"><a href="{{tool.tool_url}}">{{ tool.tool_name }}</a></h4>
-          {{ tool.tool_description }}
+        <div class="media-body pl-3">
+          <h4 class="media-heading mt-1"><a href="{{tool.tool_url}}">{{ tool.tool_name }}</a></h4>
+          <p>{{ tool.tool_description }}</p>
         </div>
       </div>
   {% endfor %}
@@ -178,7 +178,7 @@ export default class FailureBanner extends React.Component {
     render(){
         if(this.props.isShown) {
             return (
-                <div className="flamingo " data-test-component="failureBanner">
+                <div className="flamingo" data-test-component="failureBanner">
                     <div role="alert" className="alert alert-danger" id="msg-text">
                         <div className="alert-left flex-center">
                             <i className="fa fa-check fa-lg" aria-hidden="true"></i>
