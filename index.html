@@ -14,9 +14,9 @@ path: /
                 <span class="author">
                     {% if post.authors %} {% for coauthor in post.authors %}
                     {% if site.data.people[coauthor] %}
-                    <a href="/about/#author-{{ coauthor }}">{{ site.data.people[coauthor].full_name }}</a>
+                    <a href="/about#author-{{ coauthor }}">{{ site.data.people[coauthor].full_name }}</a>
                     {% else %}{{ coauthor }} {% endif %} {% unless forloop.last %} and {% endunless %} {% endfor %} {% else %} {% if site.data.people[post.author] %}
-                    <a href="/about/#author-{{ post.author }}">{{ site.data.people[post.author].full_name }}</a> {% else %} {{ post.author }} {% endif %} {% endif %}
+                    <a href="/about#author-{{ post.author }}">{{ site.data.people[post.author].full_name }}</a> {% else %} {{ post.author }} {% endif %} {% endif %}
                 </span>
             </div>
             <div class="entry mb-2">
