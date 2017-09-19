@@ -4,16 +4,16 @@ comments: true
 ---
 
 {% assign author = site.data.people[page.author] %}
-<article class="post card pa-md">
+<article>
   <h1>{{ page.title }}</h1>
 
-  <div class="date mt-sm mb-sm">{{ page.date | date: "%B %e, %Y" }}</div>
+  <div class="mt-1 mb-1">{{ page.date | date: "%B %e, %Y" }}</div>
 
   <div class="entry">
     {{ content }}
   </div>
 
-  <div class="info mt-md">
+  <div class="info mt-3">
     Written on <span class="date">{{ page.date | date: "%B %e, %Y" }} by</span>
       <span class="author">
         {% if page.authors %}
@@ -37,16 +37,16 @@ comments: true
 
   {% if page.edits %}
   <div class="edits">
-
     {% for post_edit in page.edits %}
-    <div class="edit mt-md">
-      <div class="heading">This post was edited on {{ post_edit.date | date: "%B %e, %Y %I:%M%p" }}</div>
-      <div class="description">{{ post_edit.description }}</div>
+    <div class="edit mt-3">
+      <div class="heading"><em>This post was edited on {{ post_edit.date | date: "%B %e, %Y %I:%M%p" }}</em></div>
+      <div class="description"><em>{{ post_edit.description }}</em></div>
     </div>
     {% endfor %}
 
   </div>
   {% endif %}
 
+  <h2 id="comments">Join the Discussion</h2>
   {% include disqus.html %}
 </article>

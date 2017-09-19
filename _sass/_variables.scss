@@ -4,7 +4,15 @@
 //
 
 // Colors
-$blue: #4183C4;
+$blue:          #4183C4;
+$os-green:      #78BE20;
+$os-gray:       #515151;
+$os-blue:       #0072CF;
+$os-orange:     #ED8B00;
+$os-yellow:     #FFCD00;
+$os-purple:     #7474C1;
+$os-red:        #CF0000;
+$os-muted:      #B5B5B5;
 
 // Grays
 $black: #000;
@@ -13,6 +21,14 @@ $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
 $white: #fff;
+
+// Fonts & Types
+$h1-font-size:  2rem;
+$h2-font-size:  1.75rem;
+$h3-font-size:  1.5rem;
+$h4-font-size:  1.25rem;
+$h5-font-size:  1.1rem;
+$h6-font-size:  1rem;
 
 // Font stacks
 $helvetica: Helvetica, Arial, sans-serif;

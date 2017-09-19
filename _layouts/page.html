@@ -2,11 +2,23 @@
 layout: default
 ---
 
-<article class="page">
+<div class="row">
+    <div class="{% if page.sidenav %}col-md-9{% else %}col-sm-12{% endif %}">
+        {{ content }}
+    </div>
+    {% if page.sidenav %}
+    <div class="col-md-3">
+        <div class="card" style="position: fixed;">
+        <div class="card-body">
+        <h4 class="card-title mt-0">Go To</h4>
+        <nav class="nav flex-column">
+            {% for nav in page.sidenav %}
+                <a class="nav-link" href="{{nav.path}}">{{nav.title}}</a>
+            {% endfor %}
+        </nav>
+        </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
 
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-</article>

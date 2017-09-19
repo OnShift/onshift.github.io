@@ -3,41 +3,28 @@ layout: default
 path: /
 ---
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post card pa-md">
-
-      <h3 class="mt-0"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-
-      <div class="info mt-sm mb-sm text-uppercase text-muted small">
-        <div class="date">{{ post.date | date: "%B %e, %Y" }}</div>
-        &middot; by
-        <div class="author">
-        {% if post.authors %}
-          {% for coauthor in post.authors %}
-            {% if site.data.people[coauthor] %}
-              <a href="/about/#author-{{ coauthor }}">{{ site.data.people[coauthor].full_name }}</a>
-            {% else %}
-              {{ coauthor }}
-            {% endif %}
-            {% unless forloop.last %} and {% endunless %}
-          {% endfor %}
-        {% else %}
-          {% if site.data.people[post.author] %}
-            <a href="/about/#author-{{ post.author }}">{{ site.data.people[post.author].full_name }}</a>
-          {% else %}
-            {{ post.author }}
-          {% endif %}
-        {% endif %}
+<div class="posts mt-2">
+    {% for post in site.posts %}
+    <article class="post card mb-2">
+        <div class="card-body">
+            <h3 class="mt-0"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+            <div class="info mt-1 mb-1 text-uppercase text-muted small">
+                <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+                &middot; by
+                <span class="author">
+                    {% if post.authors %} {% for coauthor in post.authors %}
+                    {% if site.data.people[coauthor] %}
+                    <a href="/about/#author-{{ coauthor }}">{{ site.data.people[coauthor].full_name }}</a>
+                    {% else %}{{ coauthor }} {% endif %} {% unless forloop.last %} and {% endunless %} {% endfor %} {% else %} {% if site.data.people[post.author] %}
+                    <a href="/about/#author-{{ post.author }}">{{ site.data.people[post.author].full_name }}</a> {% else %} {{ post.author }} {% endif %} {% endif %}
+                </span>
+            </div>
+            <div class="entry mb-2">
+                {{ post.excerpt }}
+            </div>
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
         </div>
-      </div>
-
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
     </article>
-  {% endfor %}
+    {% endfor %}
 </div>
 

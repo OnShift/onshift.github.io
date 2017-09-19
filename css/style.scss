@@ -1,40 +1,19 @@
 ---
 ---
 
+@import "variables";
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
 /* BASE RULES */
 /**************/
+html {
+  height: 100%;
+}
 body {
   font-size: 16px;  //increase font-size for the blog
+  height: 100%;
 }
-
-.post {
-  .date {
-    font-style: italic;
-  }
-  .edits {
-    .edit {
-      font-style: italic;
-    }
-  }
-  .info div {
-    display: inline;
-  }
-}
-
-  h1, h2, h3, h4 {
-    a {
-      color: inherit;
-    }
-  }
-  h2 {
-    margin-top: 3rem;
-  }
-  h1, h3, h4 {
-    margin-top: 1rem;
-  }
 
 .photo-gallery {
   list-style: none;
@@ -54,10 +33,6 @@ body {
   padding-bottom: 13px;
 }
 
-footer {
-    text-align: center;
-}
-
 .tool-icon{
   width: 50px;
   height: 50px;
@@ -65,5 +40,7 @@ footer {
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+@import "brand";
+@import "flex";
+@import "type";
 @import "highlights";
-@import "svg-icons";
