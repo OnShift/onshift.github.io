@@ -40,3 +40,16 @@ aliOrlando:
   bio:
     I am a Front End Developer for OnShift's UI/UX guild. I was hired at OnShift in May of 2016 to work closely with our User Experience team as well as OnShift's delivery teams. Previously a full stack developer at IBM UrbanCode and Big River, I've always had a passion for front end development and came to OnShift to pursue that passion.
 
+pstar:
+  first_name: Patrick
+  last_name: Star
+  full_name: Patrick Star
+  job_title: Bum
+  email: ihave5appendages@gmail.com
+  avatar: http://images5.fanpop.com/image/photos/25800000/lol-patrick-star-spongebob-25851951-500-500.png
+  handles:
+    github: pstar
+    linkedin: patrickstar
+    twitter: Patrick_Star
+  bio: |
+      Patrick Star is a fictional character in the American animated television series SpongeBob SquarePants. He is voiced by actor Bill Fagerbakke, who also voices numerous other characters on the show. Created and designed by marine biologist and cartoonist Stephen Hillenburg, the series creator, Patrick first appeared on television in the show's pilot episode "Help Wanted" on May 1, 1999.
