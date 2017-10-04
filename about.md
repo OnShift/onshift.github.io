@@ -19,6 +19,7 @@ permalink: /about
 <div class="authors">
   {% for author_hash in site.data.people %}
   {% assign author = author_hash[1] %}
+  {% if author.enabled == nil or author.enabled == true %}
     <div class="author card p-3 mt-2" id="author-{{ author_hash[0] }}">
       <div class="d-flex flex-wrap flex-center">
         <div class="flex-0-auto pr-2">
@@ -49,5 +50,6 @@ permalink: /about
         </p>
       </div>
     </div>
+  {% endif %}
   {% endfor %}
 </div>
