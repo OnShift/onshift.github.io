@@ -39,4 +39,14 @@ aliOrlando:
     twitter: fed_goose
   bio:
     I am a Front End Developer for OnShift's UI/UX guild. I was hired at OnShift in May of 2016 to work closely with our User Experience team as well as OnShift's delivery teams. Previously a full stack developer at IBM UrbanCode and Big River, I've always had a passion for front end development and came to OnShift to pursue that passion.
-
+justinSchoen:
+  first_name: Justin
+  last_name: Schoen
+  full_name: Justin Schoen
+  job_title: Software Engineer
+  email: jschoen@onshift.com
+  handles:
+    github: j23schoen
+    linkedin: schoenjj
+  bio:
+    I am a software engineer on the Kind of a Big Deal team at OnShift and I was hired in May of 2017. I work on designing solutions utilizing microservices with the gRPC framework.
