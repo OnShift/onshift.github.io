@@ -9,17 +9,12 @@ title: Pair Programming with Perry
 Hey, everyone. Today I’m going to interview Perry, a pair programmer practitioner, about pair programming, his experiences, and he’ll give us some tips on pairing effectively.
 
 <hr/>
-<span class='os-green'>*So, Perry, tell me, why should anyone pair program?*</span>
+<span class='os-green'>*So, Perry, tell me, why should anyone consider pair programming?*</span>
 <div style='margin-left: 2em;' >
-    Great question, you’ve earned a schrute buck for your curiosity, and yes, those are transferrable for Stanley nickels. Currency aside, here’s a common scenario: you can’t get unstuck on a problem so you seek someone’s help and in explaining the problem to them the solution comes to you, sometimes the other person doesn’t even say anything to help. This isn’t a new concept and it’s the reason you’ll sometimes hear people talk about rubber-duck programming, which is when you explain your code line by line to a rubber duck with intentions of discovering bugs and confusing logic, or getting unstuck.
+    I'm doing well, thanks for asking. Great question, you’ve earned a schrute buck for your curiosity. Currency aside, there are a number of reasons you should pair program, and we can get into those, but I think a big benefit is having the ability to bounce ideas off someone else as you code your solution. Here's a common scenario: You're working on a problem when you hit a wall and need to ask a fellow developer for help. When you start explaining the problem to them the solution comes to you in a flash of brilliance! This concept is not new: It’s called rubber-duck programming, which is when you explain your code line by line to a rubber duck with intentions of discovering bugs and confusing logic, or getting unstuck. I'm not trying to say that you should only be pair programming so that you don't get stuck, but pairing provides you with a continuous feedback loop and can reduce or eliminate those frustrating moments when you get stuck.
 </div>
 <br>
-<span class='os-green'>*It sounds to me like anytime I get stuck I should just start talking out loud to inanimate objects. Is that correct?*</span>
-<div style='margin-left: 2em;' >
-    Well, not really. Though that can be useful, wouldn’t you rather just get stuck far less often if you could?
-</div>
-<br>
-<span class='os-green'>*Yeah, definitely, I follow. So what do you recommend pair programming on, like what kind of work?*</span>
+<span class='os-green'>*Interesting. So what do you recommend pair programming on, like what kind of work?*</span>
 <div style='margin-left: 2em;' >
     I encourage you to try pairing on a full story or card or bug fix or whatever you call it at, where do you work again?
 </div>
@@ -31,7 +26,7 @@ Hey, everyone. Today I’m going to interview Perry, a pair programmer practitio
 <br>
 <span class='os-green'>*What kind of benefits we talking about?*</span>
 <div style='margin-left: 2em;' >
-    Code quality of course! You look like you’ve written some terrible code on your own before, so I’m su-
+    Code quality for starters! You look like you’ve written some terrible code on your own before, so I’m su-
 </div>
 <br>
 <span class='os-green'>*Watch it, Perry, though you aren’t wrong*</span>
