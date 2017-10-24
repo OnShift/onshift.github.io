@@ -6,7 +6,7 @@ date: 2017-10-23 3:00:00 -0500
 title: Pair Programming with Perry
 ---
 
-Hey, everyone. Today I’m going to interview Perry, a pair programmer practitioner, about pair programming, his experiences, and he’ll give us some tips on pairing effectively.
+Hey, everyone. Today I’m going to interview Perry, a pair programmer practitioner. We'll talk about pair programming, his experiences, and he’ll give us some tips on pairing effectively.
 
 <hr/>
 <span class='os-green'>*So, Perry, tell me, why should anyone consider pair programming?*</span>
