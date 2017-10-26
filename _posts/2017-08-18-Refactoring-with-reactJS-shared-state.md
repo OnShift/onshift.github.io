@@ -257,6 +257,9 @@ setTimeout(function() {
 
 Now that our legacy code can control reactions in our components, we'll be able to harness the power of the Virtual DOM and stay in sync with the rest of the application!
 
-# Coming Soon: Unit Testing components
-One of the major goals of this refactor effort was creating maintainable and testable code. Find out how we're testing our new React code in the next part of this series!
+# Next: Unit Testing Components
+
+[Testing and Infrastructure: Refactoring a Legacy Application in React - Part 3]({% post_url 2017-08-28-Refactoring-with-ReactJS-testing %})
+
+One of the major goals of this refactor effort was creating maintainable and testable code. Find out how we're testing our new React code in the [next part]({% post_url 2017-08-28-Refactoring-with-ReactJS-testing %}) of this series!
 

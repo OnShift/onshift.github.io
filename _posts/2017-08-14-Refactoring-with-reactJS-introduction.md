@@ -18,7 +18,7 @@ A common complication a developer experiences when looking to on-board a new fro
 In this post, we explain some background and context around the legacy application we want to improve upon and why we chose React. If you want to jump into the approach, you can jump in to one of the relevant series topics:
 * [Part 1: Components Inside Out]({% post_url 2017-08-07-Refactoring-with-reactJS-components-inside-out %})
 * [Part 2: Shared State]({% post_url 2017-08-18-Refactoring-with-reactJS-shared-state %})
-* Part 3: Unit Testing - Coming Soon!
+* [Part 3: Unit Testing]({% post_url 2017-08-28-Refactoring-with-ReactJS-testing %})
 
 ## What we are going to cover
 
