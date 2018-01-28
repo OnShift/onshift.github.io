@@ -52,6 +52,19 @@ justinSchoen:
   bio:
     I am a software engineer on the Kind of a Big Deal team at OnShift and I was hired in May of 2017. I work on designing solutions utilizing microservices with the gRPC framework.
 
+mjones:
+  first_name: Mike
+  last_name: Jones
+  full_name: Mike Jones
+  job_title: Senior Software Engineer
+  email: mjones@onshift.com
+  handles:
+    github: mjonescase
+    linkedin: mike-jones-74465aa9
+  bio: |
+    I've been a developer at OnShift since early 2015. Although I've been on several development projects, authentication has been an underlying focus for me. I'm an SME for our "auth app", a Flask web server application responsible for keeping users logged in across multiple domains, and handling federated ID integration with customers. I've also contributed to OnShift's mobile apps, which range from native iOS and Android apps to responsively designed single page web apps.
+
+
 pstar:
   enabled: false
   first_name: Patrick
