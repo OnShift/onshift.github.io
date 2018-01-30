@@ -30,7 +30,7 @@ Randall overplays his hand throughout this talk. He paints certain situations as
 <img src="{{ image.image_path }}"/>
 {% endfor %}
 
- He's being sarcastic with that slide title, but I agree with it at face value. Randall envisions using JWTs as very short-lived. He gives dashboard.product.com the responsibility of creating a database session ID and sending it back to the client. To implement single sign-on across multiple domains in this setup, you could have each application talk to the same session database. I don't see that as a better approach. Wouldn't it be just as easy, if not slightly easier, to have each application share a secret and use the JWT you have to make anyway?
+ He's being sarcastic with that slide title, but I agree with it at face value. Randall envisions JWTs as very short-lived. He gives dashboard.product.com the responsibility of creating a database session ID and sending it back to the client. To implement single sign-on across multiple domains in this setup, you could have each application talk to the same session database.Wouldn't it be just as easy, if not slightly easier, to have each application share a secret and use the JWT you have to make anyway?
 
 To be fair, sometimes a monolith is the right tool for the job. If that's the situation you're in, then by all means use your favorite web framework and the database session tokens that come with it. Are you using microservices? Use JWTs. Are you already using JWTs? Keep them, but consider adding a revocation list if revoking individual sessions is a must-have. Above all, if you use JWTs, make sure you follow Randall's JWT best practices.
 
